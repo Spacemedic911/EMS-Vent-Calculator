@@ -186,6 +186,8 @@ struct ContentView: View {
                         idealBodyWeight = height * 2.3 + 45.5
                     }
                     
+                    // this if / else could be rewritten as:
+                    // idealBodyWeight = gender=='Male'?height * 2.3 + 50:height * 2.3 + 45.5
                     
                     // Tidal Volume Calculation
                     
@@ -201,6 +203,9 @@ struct ContentView: View {
                         
                         tidalVolume = idealBodyWeight * 8
                     }
+
+                    // Easier to write as:
+                    // tidalVolume = idealBodyWeight * volume
                     
                     // Minute Volume Calculation
                     
@@ -220,6 +225,13 @@ struct ContentView: View {
                     if acidosis {
                         minuteVolume = totalVolume / 1000
                     }
+
+                    //this does not need to be separate from the above if statement rewrite as:
+                    // if acidosis {
+                    //    totalVolume = idealBodyWeight * 120
+                    //    minuteVolume = totalVolume / 1000
+                    // }
+
                     
                     // Respiratory Rate Calculation
                     
