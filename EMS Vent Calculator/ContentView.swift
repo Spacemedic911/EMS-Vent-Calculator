@@ -206,7 +206,9 @@ struct ContentView: View {
 
                     // Easier to write as:
                     // tidalVolume = idealBodyWeight * volume or
-                    // if 6..8 ~= volune, tidalVolume = idealBodyWeight * volume
+                    // if 6..8 ~= volume {
+                    //      tidalVolume = idealBodyWeight * volume
+                    // }
                     
                     // Minute Volume Calculation
                     
